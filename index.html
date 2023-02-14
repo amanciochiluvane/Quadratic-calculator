@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic-calc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Welcome to Quadratic-calc!</h1>
+<div id="ps">
+    <p id="na"></p>
+    <p>🤎🤎</p>
+</div>
+<div id="inputs">
+    <input type="number" name="va" id="va" placeholder="Enter the a value"> <br>
+    <input type="number" name="vb" id="vb" placeholder="Enter the b value"> <br>
+    <input type="number" name="vc" id="vc" placeholder="Enter the c value"> <br>
+    <input type="button" value="Calculate" id="button" onclick="clicar()">
+</div>   
+<div id="ans">
+</div>
+
+<footer>
+    Site created by Amâncio Chiluvane
+</footer>
+<script>
+    
+    var name = window.prompt('Write your name:')
+    
+    var na = window.document.getElementById('na')
+    na.innerHTML = name
+
+    function clicar(){
+        var av = window.document.getElementById('va')
+        var a = Number(av.value)
+
+        var bv = window.document.getElementById('vb')
+        var b = Number(bv.value)
+
+        var cv = window.document.getElementById('vc')
+        var c = Number(cv.value)
+        
+        var ans = window.document.getElementById('ans')
+        var d = b**2-4*a*c
+
+        if(a==0){
+        ans.innerHTML = 'It is not a quadratic equation'
+        }
+        else
+            if(d<0){
+                ans.innerHTML='There is no real solutions'
+            }
+            else 
+                if(d==0){
+                    var raiz = d**(1/2)
+                    var x1=(-b-raiz)/2*a
+
+                    ans.innerHTML='x1=x2= '+x1
+                }
+                else 
+                    if(d>0){
+                    var raiz = d**(1/2)
+                    var x1=(-b-raiz)/2*a
+                    var x2=(-b+raiz)/2*a
+
+                    ans.innerHTML = 'x1= '+x1 + ' x2= '+x2
+                    }
+
+    window.alert('It is a pleasure to work with you '+name+' 🤎🤎')       
+    }
+    
+</script>
+</body>
+</html>
