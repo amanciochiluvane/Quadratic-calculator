@@ -45,7 +45,7 @@
         var c = Number(cv.value)
         
         var ans = window.document.getElementById('ans')
-        var d = b**2-4*a*c
+        var d = b**2-4*(a)*(c)
 
         if(a==0){
         ans.innerHTML = 'It is not a quadratic equation'
@@ -64,8 +64,8 @@
                 else 
                     if(d>0){
                     var raiz = d**(1/2)
-                    var x1=(-b-raiz)/2*a
-                    var x2=(-b+raiz)/2*a
+                    var x1=(-b-raiz)/(2*a)
+                    var x2=(-b+raiz)/(2*a)
 
                     ans.innerHTML = 'x1= '+x1 + ' x2= '+x2
                     }
